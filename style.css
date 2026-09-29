@@ -1,0 +1,811 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #101010;
+
+    color: white;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+    background-color: rgba(10, 10, 10, 0.95);
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    color: #00e5ff;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.logo span {
+
+    color: white;
+}
+
+
+/* MENU */
+
+nav {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+
+    color: #dddddd;
+
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+
+nav a:hover {
+
+    color: #00e5ff;
+}
+
+
+/* PERFIL */
+
+.perfil {
+
+    margin-left: auto;
+
+    border: none;
+
+    background-color: #252525;
+
+    color: white;
+
+    border-radius: 50%;
+
+    width: 38px;
+
+    height: 38px;
+
+    cursor: pointer;
+}
+
+
+/* BANNER */
+
+.hero {
+
+    min-height: 620px;
+
+    padding: 170px 6% 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            #101010 0%,
+            rgba(16,16,16,.85) 42%,
+            rgba(16,16,16,.25) 100%
+        ),
+
+        radial-gradient(
+            circle at 75% 35%,
+            #164d61 0%,
+            #18222a 32%,
+            #101010 68%
+        );
+}
+
+
+.hero-conteudo {
+
+    max-width: 570px;
+}
+
+
+.categoria {
+
+    color: #00e5ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+
+    font-size: 65px;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.descricao {
+
+    color: #d2d2d2;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+    margin-bottom: 28px;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.btn {
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 13px 21px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.assistir {
+
+    background-color: white;
+
+    color: #111;
+}
+
+
+.lista {
+
+    background-color: #333;
+
+    color: white;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+    opacity: .9;
+}
+
+
+/* SEÇÕES */
+
+.secao {
+
+    padding: 30px 6%;
+}
+
+
+.titulo-secao {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.titulo-secao h2 {
+
+    font-size: 24px;
+}
+
+
+.titulo-secao span {
+
+    color: #00e5ff;
+
+    font-size: 13px;
+}
+
+
+/* CARDS */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(150px, 1fr));
+
+    gap: 16px;
+}
+
+
+.card {
+
+    background-color: #1b1b1b;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition: .25s;
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-7px)
+        scale(1.02);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.45);
+}
+
+
+/* POSTER */
+
+.poster {
+
+    height: 235px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #183b47,
+            #202020 65%,
+            #090909
+        );
+}
+
+
+.card:nth-child(2) .poster {
+
+    background:
+        linear-gradient(
+            135deg,
+            #38284b,
+            #171717
+        );
+}
+
+
+.card:nth-child(3) .poster {
+
+    background:
+        linear-gradient(
+            135deg,
+            #25472f,
+            #151515
+        );
+}
+
+
+.card:nth-child(4) .poster {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4c3030,
+            #171717
+        );
+}
+
+
+.card:nth-child(5) .poster {
+
+    background:
+        linear-gradient(
+            135deg,
+            #253c59,
+            #141414
+        );
+}
+
+
+.poster span {
+
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+
+/* INFORMAÇÕES DOS CARDS */
+
+.card-info {
+
+    padding: 13px;
+}
+
+
+.card-info h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 6px;
+}
+
+
+.card-info p {
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+
+.card-info button {
+
+    margin-top: 12px;
+
+    background-color: transparent;
+
+    border: 1px solid #444;
+
+    color: #ddd;
+
+    padding: 7px 10px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+
+.card-info button:hover {
+
+    border-color: #00e5ff;
+
+    color: #00e5ff;
+}
+
+
+/* MINHA LISTA */
+
+.minha-lista {
+
+    min-height: 230px;
+}
+
+
+#lista-vazia {
+
+    color: #888;
+
+    margin: 15px 0;
+}
+
+
+/* RODAPÉ */
+
+footer {
+
+    margin-top: 50px;
+
+    padding: 35px 6%;
+
+    color: #777;
+
+    border-top: 1px solid #252525;
+
+    font-size: 13px;
+}
+
+
+/* NOTIFICAÇÃO */
+
+.notificacao {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background-color: #00e5ff;
+
+    color: #071014;
+
+    padding: 13px 18px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transform: translateY(100px);
+
+    opacity: 0;
+
+    transition: .3s;
+
+    z-index: 20;
+}
+
+
+.notificacao.mostrar {
+
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .cards {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-wrap: wrap;
+    }
+
+
+    nav {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content:
+            space-between;
+    }
+
+
+    .hero {
+
+        padding:
+            180px 5% 70px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 45px;
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .poster {
+
+    
+        height: 190px;
+    }
+
+}
+        /* SEÇÕES */
+    
+.secao {
+    padding: 40px 7%;
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-secao h2 {
+    font-size: 24px;
+}
+
+.titulo-secao a {
+    color: #45caff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    height: 270px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Cores provisórias dos filmes */
+
+.card-1 {
+    background-image: url("imagens/ultimo-horizonte.jpeg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.card-2 {
+    background-image: url("imagens/alem-da-fronteira.jpeg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.card-3 {
+    background-image: url("imagens/missao-noturna.jpeg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.card-4 {
+    background-image: url("imagens/zona-desconhecida.jpeg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Informações dentro do card */
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.card-info h3 {
+    font-size: 14px;
+    margin: 0 0 4px 0;
+}
+
+
+.card-info p {
+    font-size: 12px;
+    color: #ccc;
+    margin: 0 0 6px 0;
+}
+
+.card-info button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card-info button:hover {
+    background-color: #45caff;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}.secao {
+    padding: 40px 7%;
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-secao h2 {
+    font-size: 24px;
+}
+
+.titulo-secao a {
+    color: #45caff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    height: 270px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Cores provisórias dos filmes */
+
+.card-1 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.9), transparent),
+        url("imagens/horizonte.jpg");
+}
+
+.card-2 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.9), transparent),
+        url("imagens/fronteira.jpg");
+}
+
+.card-3 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.9), transparent),
+        url("imagens/missao.jpg");
+}
+
+.card-4 {
+    background-image:
+        linear-gradient(to top, rgba(0,0,0,0.9), transparent),
+        url("imagens/zona.jpg");
+}
+/* Informações dentro do card */
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.95)
+    );
+}
+
+.card-info h3 {
+    margin-bottom: 6px;
+}
+
+.card-info p {
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+.card-info button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card-info button:hover {
+    background-color: #45caff;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    }
+.card-info h3,
+.card-info p {
+    display: none;
+}
+

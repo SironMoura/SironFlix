@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SironFlix</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <a href="#" class="logo">
+            Siron<span>Flix</span>
+        </a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#filmes">Filmes</a>
+            <a href="#series">Séries</a>
+            <a href="#minha-lista">Minha Lista</a>
+        </nav>
+
+        <button class="perfil">
+            👤
+        </button>
+
+    </header>
+
+
+    <!-- BANNER PRINCIPAL -->
+<main>
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-conteudo">
+
+            <p class="categoria">FILME EM DESTAQUE</p>
+
+            <h1>O Último Horizonte</h1>
+
+            <p class="descricao">
+                Uma equipe embarca em uma missão para descobrir o que existe além do
+                horizonte. Uma aventura cheia de mistério, tecnologia e ação.
+            </p>
+
+            <div class="hero-botoes">
+
+                <button class="btn-assistir">
+                    ▶ Assistir
+                </button>
+
+                <button
+                    class="btn-lista"
+                    onclick="adicionarDestaque()">
+                    + Minha Lista
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- FILMES EM DESTAQUE -->
+
+<section id="filmes" class="secao">
+
+    <div class="titulo-secao">
+        <h2>Filmes em destaque</h2>
+        <a href="#">Ver todos</a>
+    </div>
+
+    <div class="cards">
+<div class="card card-1">
+
+        <div class="card-info">
+                <h3>O Último Horizonte</h3>
+                <p>Ficção científica • 2026</p>
+                <button>▶ Assistir</button>
+            </div>
+        </div>
+
+        <div class="card card-2">
+            <div class="card-info">
+                <h3>Além da Fronteira</h3>
+                <p>Aventura • 2026</p>
+                <button>▶ Assistir</button>
+            </div>
+        </div>
+
+        <div class="card card-3">
+            <div class="card-info">
+                <h3>Missão Noturna</h3>
+                <p>Ação • 2025</p>
+                <button>▶ Assistir</button>
+            </div>
+        </div>
+
+        <div class="card card-4">
+            <div class="card-info">
+                <h3>Zona Desconhecida</h3>
+                <p>Suspense • 2026</p>
+                <button>▶ Assistir</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+        <!-- SÉRIES -->
+        <section id="series" class="secao">
+
+            <div class="titulo-secao">
+
+                <h2>
+                    Séries populares
+                </h2>
+
+                <span>
+                    Ver todos
+                </span>
+
+            </div>
+
+            <div
+                class="cards"
+                id="cards-series">
+            </div>
+
+        </section>
+
+
+        <!-- MINHA LISTA -->
+        <section
+            id="minha-lista"
+            class="secao minha-lista">
+
+            <div class="titulo-secao">
+
+                <h2>
+                    Minha lista
+                </h2>
+
+            </div>
+
+            <p id="lista-vazia">
+                Você ainda não adicionou títulos à sua lista.
+            </p>
+
+            <div
+                class="cards"
+                id="cards-lista">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            SironFlix — Projeto acadêmico desenvolvido
+            com HTML, CSS e JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- MENSAGEM -->
+    <div
+        id="notificacao"
+        class="notificacao">
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
